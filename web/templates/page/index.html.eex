@@ -1,0 +1,8 @@
+<div class="grid">
+	<div class="grid-sizer"></div>
+	<%= for post <- @posts["data"] do %>
+		<div class="grid-item">
+			<img src="<%= post["images"]["standard_resolution"]["url"] %>">
+		</div>
+	<% end %>
+</div>

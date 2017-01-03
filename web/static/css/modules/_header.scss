@@ -1,0 +1,14 @@
+header {
+  padding:5px 5px 5px 0;
+  display:flex;
+  line-height:24px;
+}
+
+.logo {
+  flex:0 0 auto;
+}
+
+nav {
+  flex:1 0 auto;
+  text-align:right;
+}
