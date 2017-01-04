@@ -17,11 +17,9 @@ defmodule Mtnblog.Router do
   end
 
   scope "/", Mtnblog do
-    pipe_through :browser # Use the default browser stack
+    pipe_through [:browser, :csrf] # Use the default browser stack
 
     get  "/", PageController, :index
-    get  "/subscription", SubscriptionController, :challenge
-    post "/subscription", SubscriptionController, :callback
   end
 
   # Other scopes may use custom stacks.
