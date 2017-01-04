@@ -8,7 +8,9 @@ defmodule Mtnblog.SubscriptionController do
   end
 
   def callback(conn, _params) do
-    token = Application.get_env(:mtnblog, :instagram)[:access_token]
+    # dev
+    # token = Application.get_env(:mtnblog, :instagram)[:access_token]
+    token = System.get_env("INSTA_ACCESS_TOKEN")
     response = Tesla.get("https://api.instagram.com/v1/users/self/media/recent/", query: [access_token: token])
     data = Poison.decode!(response.body)
 
