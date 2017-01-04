@@ -19,5 +19,7 @@ defmodule Mtnblog.SubscriptionController do
         Mtnblog.Repo.insert(%Post{url: url, image: image})
       end
     end
+
+    redirect(conn, to: "/")
   end
 end
