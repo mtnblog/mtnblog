@@ -1,8 +1,8 @@
 <div class="grid">
 	<div class="grid-sizer"></div>
-	<%= for post <- @posts["data"] do %>
+	<%= for post <- @posts do %>
 		<div class="grid-item">
-			<img src="<%= post["images"]["standard_resolution"]["url"] %>">
+      <a href="<%= post.url %>"><img src="<%= post.image %>"></a>
 		</div>
 	<% end %>
 </div>
