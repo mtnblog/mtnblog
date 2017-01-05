@@ -1,8 +1,1 @@
-<div class="grid">
-	<div class="grid-sizer"></div>
-	<%= for post <- @posts do %>
-		<div class="grid-item">
-      <a href="<%= post.url %>"><img src="<%= post.image %>"></a>
-		</div>
-	<% end %>
-</div>
+<%= render "_feed.html", posts: @posts %>

@@ -1,0 +1,7 @@
+<div class="grid-item post">
+  <a href="<%= @post.url %>">
+    <div class="img-container">
+      <img src="<%= @post.image %>">
+    </div>
+  </a>
+</div>
