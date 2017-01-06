@@ -1,5 +1,5 @@
 <div class="grid-item post">
-  <a href="<%= @post.url %>">
+  <a href="<%= @post.url %>" target="_blank">
     <div class="img-container">
       <img src="<%= @post.image %>">
     </div>
