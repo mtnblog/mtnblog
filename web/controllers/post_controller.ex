@@ -3,7 +3,8 @@ defmodule Mtnblog.PostController do
   alias Mtnblog.Post
   
   def index(conn, _) do
-    posts = Repo.all(Post)
+    query = from p in Post, order_by: [desc: p.inserted_at]    
+    posts = Repo.all(query)
     render(conn, "index.html", posts: posts)
   end
 end
