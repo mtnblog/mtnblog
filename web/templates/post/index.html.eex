@@ -6,8 +6,8 @@
       </div>
       <div class="content">
         <div class="heading">
-          <a class="title" href="<%= post.url %>"><%= post.title %></a>
-          <span class="host">(<a href="#"><%= host(post.url) %></a>)</span>
+          <a class="title" href="<%= post.url %>" target="_blank"><%= post.title %></a>
+          <span class="host">(<%= host(post.url) %>)</span>
         </div>
         <div class="meta">
           <span class="rating">
