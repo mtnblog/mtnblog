@@ -1,15 +1,19 @@
 header {
-  padding:5px 5px 5px 0;
+  padding:5px;
   display:flex;
-  line-height:24px;
+  align-items:center;
+  background:$grey1;
 }
 
 .logo {
-  color:$grey5;
   flex:0 0 auto;
 }
 
 nav {
   flex:1 0 auto;
   text-align:right;
+}
+
+nav a {
+  padding:0 5px;
 }

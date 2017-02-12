@@ -12,23 +12,45 @@
 // If you no longer want to use a dependency, remember
 // to also remove its path from "config.paths.watched".
 import "phoenix_html"
-
-// Import local files
-//
-// Local files can be imported directly using relative
-// paths "./socket" or full ones "web/static/js/socket".
-
-// import socket from "./socket"
-
 import "imagesloaded"
+import "slick-carousel"
+import fitvids from "fitvids"
 import Masonry from "masonry-layout"
+import socket from "./socket"
 
+fitvids()
 
 $('.grid').imagesLoaded(function() {
   $('.grid').animate({'opacity': 1});
   var masonry = new Masonry('.grid', {
     columnWidth: '.grid-sizer',
     itemSelector: '.grid-item',
-    gutter: 5
+    gutter: 5 
   });
 });
+
+/*
+$('.hero').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  adaptiveHeight: true,
+  asNavFor: '.carousel'
+});
+$('.carousel').slick({
+  centerMode: true,
+  infinite: true,
+  slidesToShow: 3,
+  asNavFor: '.hero',
+  variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+*/

@@ -1,0 +1,30 @@
+.articles {
+  .article {
+    padding:20px 0;
+
+    .title {
+      font-size:24px;
+      font-weight:bold;
+      color:$grey2;
+      text-decoration:none;
+      &:hover {
+        color:$blue1;
+      }
+    }
+    .meta {
+      color:$grey4;
+      font-size:12px;
+
+      .author, .date {
+        margin-right:10px;
+      }
+    }
+    .excerpt {
+      margin:5px 0 10px 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom:1px solid $grey5;
+    }
+  }
+}

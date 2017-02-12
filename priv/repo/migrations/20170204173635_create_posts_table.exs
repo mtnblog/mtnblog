@@ -3,8 +3,9 @@ defmodule Mtnblog.Repo.Migrations.CreatePostsTable do
 
   def change do
     create table(:posts) do
-      add :image, :string
+      add :rating, :integer, default: 0
       add :url, :string
+      add :title, :string
 
       timestamps()
     end

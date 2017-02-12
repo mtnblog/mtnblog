@@ -17,6 +17,9 @@ html {
   -webkit-text-size-adjust: 100%; /* 3 */
 }
 
+div {
+  box-sizing:border-box;
+}
 /* Sections
    ========================================================================== */
 

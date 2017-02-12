@@ -1,0 +1,22 @@
+<div class="videos">
+  <div class="video-hero">
+    <iframe src="<%= @video.url %>" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  </div>
+
+  <div class="grid">
+    <div class="grid-sizer"></div>
+    <%= for video <- @videos do %>
+      <div class="video grid-item">
+        <a href="/videos/<%= video.id %>">
+          <div class="video-image-container">
+            <img class="video-image" src="<%= video.image %>">
+          </div>
+        </a>
+        <div class="video-info">
+          <a class="title" href="/videos/<%= video.id %>"><%= video.title %></a>
+          <span class="location"><%= video.location %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

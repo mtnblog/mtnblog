@@ -3,9 +3,14 @@
 }
 
 .grid-item, .grid-sizer {
-	width:calc(33.3333333333% - 5px);
+  width:calc((100% - 10px) / 3);
+}
+
+.grid-item {
+  margin-bottom:5px;
 }
 
 .grid-item img {
 	width:100%;
+  display:block;
 }

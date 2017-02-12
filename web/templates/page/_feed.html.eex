@@ -1,6 +1,0 @@
-<div class="grid feed">
-	<div class="grid-sizer"></div>
-	<%= for post <- @posts do %>
-    <%= render "_post.html", post: post %>
-	<% end %>
-</div>

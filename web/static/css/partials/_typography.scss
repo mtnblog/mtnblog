@@ -1,14 +1,52 @@
+a {
+  text-decoration:none;
+}
+
+p {
+  line-height:1.3;
+}
+
 .logo {
   font-family:sans-serif;
-  text-decoration:none;
-  color:black;
+  color:$grey6;
   font-weight:bold;
   font-size:24px;
 }
 
+.logo:hover {
+  color: $blue1;
+}
+
 nav a {
-  text-decoration:none;
-  color:black;
+  font-family:sans-serif;
+  color:$grey6;
   font-weight:bold;
-  font-size:14px;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+a.active {
+  color:$blue1;
+}
+
+a:hover {
+  color:$blue1;
+}
+
+input {
+  font-size:12px;
+}
+
+button {
+  font-family:sans-serif;
+  text-transform:uppercase;
+  font-weight:bold;
+  font-size:12px;
+  letter-spacing:0.5px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin:0;
+  padding:0;
+  color:$grey2;
 }

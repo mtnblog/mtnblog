@@ -1,0 +1,14 @@
+<div class="photos">
+  <div class="grid">
+    <div class="grid-sizer"></div>
+    <%= for photo <- @photos do %>
+      <div class="photo grid-item">
+        <a href="/photos/<%= photo.id %>">
+          <div class="photo-image-container">
+            <img class="photo-image" src="<%= photo.image %>">
+          </div>
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>

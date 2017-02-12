@@ -1,0 +1,89 @@
+.posts {
+  margin:0;
+  padding:5px;
+
+  .post {
+    padding:5px 0;
+    white-space:nowrap;
+
+    .index {
+      display:inline-block;
+      color:$grey5;
+      font-size:16px;
+      width:20px;
+      padding-right:5px;
+      text-align:right;
+      vertical-align:top;
+      cursor:default;
+    }
+    .voting {
+      display:inline-block;
+      vertical-align:middle;
+
+      .upvote {
+        display:block;
+        color:$grey4;
+
+        &:hover {
+          cursor:pointer;
+          color:$orange1;
+        }
+      }
+      .downvote {
+        display:block;
+        color:$grey4;
+
+        &:hover {
+          cursor:pointer;
+          color:$blue1;
+        }
+      }
+    }
+
+    .content {
+      display:inline-block;
+      vertical-align:middle;
+      white-space:normal;      
+
+      .heading {
+        .title {
+          color:$grey2;
+
+          &:hover {
+            color:$blue1;
+          }
+        }
+        .host {
+          font-size:13px;
+          color:$grey3;
+          a {
+            color:$grey2;
+
+            &:hover {
+              color:$blue1;
+            }
+          }
+        }
+      }
+      .meta {
+        .rating {
+          font-size:11px;
+          color:$grey4;
+        }
+        .signature {
+          font-size:13px;
+          color:$grey3;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  text-align:center;
+  padding:5px 0;
+  a {
+    font-size:13px;
+    color:$grey3;
+  }
+}

@@ -1,1 +1,0 @@
-<%= render "_feed.html", posts: @posts %>

@@ -1,0 +1,6 @@
+<div class="categories">
+  <span class="toggle-categories" href="#">All Content <i class="fa fa-caret-down"></i></span>
+  <div class="category-list">
+    <a class="category-link" href=#">Training</a>
+  </div>
+</div>

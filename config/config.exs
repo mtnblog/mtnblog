@@ -22,6 +22,30 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Configures guardian authentication
+config :guardian, Guardian,
+  allowed_algos: ["HS512"],
+  verify_module: Guardian.JWT,
+  issuer: "Mtnblog",
+  ttl: { 30, :days },
+  verify_issuer: true,
+  secret_key: "EAcHIzUPdHmSgkL6EFIUEOnrIPXn0ORG1TuvI/cIq2tVl1zwhTAPPVhZ3CMUkaMe",
+  serializer: Mtnblog.GuardianSerializer
+
+config :ex_admin,
+  skin_color: :black,
+  repo: Mtnblog.Repo,
+  module: Mtnblog,
+  modules: [
+    Mtnblog.ExAdmin.Dashboard,
+    Mtnblog.ExAdmin.Post,
+    Mtnblog.ExAdmin.Photo,
+    Mtnblog.ExAdmin.Video
+  ]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+config :xain, :after_callback, {Phoenix.HTML, :raw}
+

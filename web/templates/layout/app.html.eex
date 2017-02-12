@@ -11,13 +11,19 @@
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link rel="icon" href="<%= static_path(@conn, "/favicon.ico") %>">
     <link rel="mask-icon" href="<%= static_path(@conn, "/favicon.svg") %>">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+
+    
   </head>
 
   <body class="wrapper">
     <header>
       <a class="logo" href="/">MTNBLOG</a>
       <nav role="navigation">
-        <!--<a href="#"><i class="fa fa-sliders"></i></a>-->
+        <a href="/photos">Photos</a>
+        <a href="/videos">Videos</a>
       </nav>
     </header>
 

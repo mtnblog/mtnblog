@@ -1,0 +1,23 @@
+.videos {
+  background:white;
+  padding:5px;
+
+  .video-hero {
+    margin-bottom:5px;
+  }
+  .video {
+    .video-info {
+      padding:5px 0;
+      .title {
+        display:block;
+        color:$grey2;
+        font-size:14px;
+        font-weight:bold;
+      }
+      .location {
+        color:$grey4;
+        font-size:12px;
+      }
+    }
+  }
+}

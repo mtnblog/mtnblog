@@ -1,0 +1,22 @@
+<%= render "_hero.html" %>
+<%= render "_categories.html" %>
+
+<div class="articles">
+  <div class="article">
+    <a class="title" href="#">Hello World!</a>
+    <p class="excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim...</p>
+    <div class="meta">
+      <span class="author"><i class="fa fa-user"></i> Tim Whitaker</span>
+      <span class="date"><i class="fa fa-clock-o"></i> 6 hours ago</span>
+    </div>
+  </div>
+
+  <div class="article">
+    <a class="title" href="#">Hello World!</a>
+    <p class="excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim...</p>
+    <div class="meta">
+      <span class="author"><i class="fa fa-user"></i> Tim Whitaker</span>
+      <span class="date"><i class="fa fa-clock-o"></i> 6 hours ago</span>
+    </div>
+  </div>
+</div>
