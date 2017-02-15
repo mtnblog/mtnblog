@@ -2,7 +2,7 @@ defmodule Mtnblog.PostView do
   use Mtnblog.Web, :view
 
   def host(url) do
-    URI.parse(url).host
+    List.last(String.split(URI.parse(url).host, "www."))
   end
 
   def time_diff(time) do
