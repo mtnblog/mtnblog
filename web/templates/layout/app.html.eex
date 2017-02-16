@@ -8,9 +8,12 @@
     <meta name="author" content="">
 
     <title>MTNBlog | High Altitude Content to Get You Psyched</title>
+    <meta name="description" content="High altitude content to get you psyched! We've got your bouldering, alpine climbing, trad climbing, sport climbing and deep water soloing needs covered." />
+    <meta name="keywords" content="climbing,photos,videos,articles,mountain,blog,mtnblog,mountainblog,climbingblog,pictures,mountains,summits,bouldering,sport,trad,traditional,alpine">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link rel="icon" href="<%= static_path(@conn, "/favicon.ico") %>">
     <link rel="mask-icon" href="<%= static_path(@conn, "/favicon.svg") %>">
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -39,7 +42,5 @@
     <main role="main">
       <%= render @view_module, @view_template, assigns %>
     </main>
-
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
