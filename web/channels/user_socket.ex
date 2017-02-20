@@ -2,7 +2,7 @@ defmodule Mtnblog.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  channel "posts", Mtnblog.PostsChannel
+  #channel "posts", Mtnblog.PostsChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket,

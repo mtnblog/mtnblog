@@ -4,8 +4,6 @@
   margin-top:-5px;
 
   .hero {
-    margin-bottom:5px;
-
     .hero-image-container {
       position:relative;
       width:100%;
@@ -20,5 +18,12 @@
         max-height:80vh;
       }
     }
+  }
+
+  .description {
+    color:$grey4;
+    text-align:center;
+    padding:10px 0;
+    font-size:13px;
   }
 }
