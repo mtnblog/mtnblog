@@ -1,5 +1,6 @@
 defmodule Mtnblog.PostView do
   use Mtnblog.Web, :view
+  import Scrivener.HTML
 
   def host(url) do
     List.last(String.split(URI.parse(url).host, "www."))

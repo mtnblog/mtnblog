@@ -1,0 +1,13 @@
+<div class="categories">
+  <span class="toggle-categories"><%= @current_category %> <i class="category-caret fa fa-caret-down"></i></span>
+  <span class="category-list">
+    <%= if @current_category != "All Content" do %>
+      <%= link("All Content", to: page_path(@conn, :home, page: @page), class: "category-link") %>
+    <% end %>
+    <%= for category <- @categories do %>
+      <%= if @current_category != category.title do %>
+        <%= link(category.title, to: page_path(@conn, :home, category: category.title, page: @page), class: "category-link") %>
+      <% end %>
+    <% end %>
+  </span>
+</div>

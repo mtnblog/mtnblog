@@ -19,7 +19,8 @@ defmodule Mtnblog.Mixfile do
   def application do
     [mod: {Mtnblog, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin, :timex]]
+                    :phoenix_ecto, :postgrex, :comeonin, :scrivener_ecto, :scrivener_html, 
+                    :timex]]
   end
 
   # Specifies which paths to compile per environment.
@@ -42,6 +43,8 @@ defmodule Mtnblog.Mixfile do
      {:ex_admin, github: "smpallen99/ex_admin"},
      {:guardian, "~> 0.14"},
      {:poison, "~> 3.0", override: true},
+     {:scrivener_ecto, "~> 1.0"},     
+     {:scrivener_html, "~> 1.1"},
      {:tesla, "~> 0.6.0"},
      {:timex, "~> 3.0"}]
   end

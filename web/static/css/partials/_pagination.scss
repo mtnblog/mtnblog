@@ -1,0 +1,17 @@
+.pagination {
+  list-style:none;
+  li {
+    display:inline-block;
+    margin:0 5px;
+    a {
+      &:hover {
+        color:$blue1;
+      }
+    }
+    &.current {
+      a {
+        color:$blue1;
+      }
+    }
+  }
+}

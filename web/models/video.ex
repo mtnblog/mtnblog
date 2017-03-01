@@ -1,11 +1,13 @@
 defmodule Mtnblog.Video do
   use Mtnblog.Web, :model
+  alias Mtnblog.Category
 
   schema "videos" do
     field :image, :string
     field :location, :string
     field :title, :string
     field :url, :string
+    belongs_to :category, Category
 
     timestamps()
   end

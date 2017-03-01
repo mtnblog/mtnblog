@@ -1,6 +1,9 @@
-import fitvids from "fitvids"
 import "imagesloaded"
+import "slick-carousel"
+import fitvids from "fitvids"
 import Masonry from "masonry-layout"
+
+fitvids();
 
 if ($('.grid').length) {
   $('.grid').imagesLoaded(function() {
@@ -13,4 +16,16 @@ if ($('.grid').length) {
   });
 }
 
-fitvids();
+if ($('.filter').length) {
+  $('.toggle-filter').click(function() {
+    $('.filter-caret').toggleClass('fa-caret-down fa-caret-right');
+    $('.filter-list').toggle();
+  });
+}
+
+if ($('.categories').length) {
+  $('.toggle-categories').click(function() {
+    $('.category-caret').toggleClass('fa-caret-down fa-caret-right');
+    $('.category-list').toggle();
+  });
+}

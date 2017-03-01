@@ -1,0 +1,13 @@
+<div class="filter">
+  <div class="filter-sort">
+    <span class="active">Top</span>
+    <span>Featured</span>
+  </div>
+  <span>posts from</span>
+  <div class="filter-time">
+    <span class="active">This Week</span>
+    <span>This Month</span>
+    <span>This Year</span>
+    <span>All Time</span>
+  </div>
+</div>

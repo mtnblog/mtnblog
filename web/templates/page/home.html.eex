@@ -1,40 +1,25 @@
 <div class="home">
-
   <div class="hero">
-    <img src="http://i.imgur.com/uxqFhZj.jpg">
-    <img src="http://i.imgur.com/NyjZsPh.jpg"> 
-    <img src="http://i.imgur.com/aSTH1Ia.jpg">
-    <img src="http://i.imgur.com/ZgjyET2.jpg">
-    <img src="http://i.imgur.com/b5zi5ND.jpg">
-    <img src="http://i.imgur.com/BoMlMNd.jpg">
-    <img src="http://i.imgur.com/f8bJqrE.jpg">
+    <img src="/images/bear.jpg">
   </div>
 
-  <div class="carousel">
-    <img src="http://i.imgur.com/uxqFhZj.jpg">
-    <img src="http://i.imgur.com/NyjZsPh.jpg"> 
-    <img src="http://i.imgur.com/aSTH1Ia.jpg">
-    <img src="http://i.imgur.com/ZgjyET2.jpg">
-    <img src="http://i.imgur.com/b5zi5ND.jpg">
-    <img src="http://i.imgur.com/BoMlMNd.jpg">
-    <img src="http://i.imgur.com/f8bJqrE.jpg">
-  </div>
+  <!--
+  <%= #render "_categories.html", conn: @conn, 
+      #categories: @categories, 
+      #current_category: @current_category, 
+      #page: @page.page_number %>
+  -->
 
-  <div class="filter">
-    <div class="filter-sort">
-      <span class="active">Top</span>
-      <span>Recent</span>
-    </div>
-    <span>posts from</span>
-    <div class="filter-time">
-      <span class="active">This Week</span>
-      <span>This Month</span>
-      <span>This Year</span>
-      <span>All Time</span>
-    </div>
-  </div>
+  <%= render "_filter.html", conn: @conn,
+      current_filter: @current_filter,
+      page: @page.page_number %>
 
-  <div class="posts">
-  </div>
+  <%= render "_news.html", posts: @page.entries %>
 
+  <%= pagination_links @page, 
+      view_style: :foundation,
+      previous: render("_prev_link.html"),
+      next: render("_next_link.html"),
+      diff: @diff
+  %>
 </div>

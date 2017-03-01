@@ -1,5 +1,6 @@
 defmodule Mtnblog.PageView do
   use Mtnblog.Web, :view
+  import Scrivener.HTML  
   
   def host(url) do
     URI.parse(url).host

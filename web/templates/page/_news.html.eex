@@ -1,5 +1,5 @@
 <div class="posts">
-  <%= for {post, index} <- Enum.with_index(@posts) do %>
+  <%= for {post, index} <- Enum.with_index (@posts) do %>
     <div class="post">
       <div class="post-wrapper">
         <div class="index">
@@ -22,9 +22,4 @@
       </div>
     </div>
   <% end %>
-
-  <%= pagination_links @page, 
-        view_style: :foundation,
-        previous: render("_prev_link.html"),
-        next: render("_next_link.html") %>
 </div>

@@ -40,11 +40,15 @@ config :ex_admin,
   title: "MTNAdmin",
   module: Mtnblog,
   modules: [
+    Mtnblog.ExAdmin.Category,
     Mtnblog.ExAdmin.Dashboard,
     Mtnblog.ExAdmin.Post,
     Mtnblog.ExAdmin.Photo,
     Mtnblog.ExAdmin.Video
   ]
+
+config :scrivener_html,
+  routes_helper: Mtnblog.Router.Helpers
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
