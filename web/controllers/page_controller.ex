@@ -2,12 +2,16 @@ defmodule Mtnblog.PageController do
   use Mtnblog.Web, :controller
   alias Mtnblog.{Category, Post, Photo, Video}
 
+  def landing(conn, _) do
+    render(conn, "landing.html", layout: false)  
+  end
+
   def home(conn, params) do
     page_num = params["page"]
 
     {diff, _} =
       case params["diff"] do
-        nil -> {7, :days}
+        nil -> {31, :days}
         _   -> Integer.parse(params["diff"])
       end
 

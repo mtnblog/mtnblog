@@ -29,3 +29,15 @@ if ($('.categories').length) {
     $('.category-list').toggle();
   });
 }
+
+/*
+function loop() {
+    $('.clouds-fg').css({left:2288});
+    $('.clouds-fg').animate ({
+        left: '-=4576',
+    }, 10000, 'linear', function() {
+        loop();
+    });
+}
+loop();
+*/
