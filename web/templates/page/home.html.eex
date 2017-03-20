@@ -1,25 +1,9 @@
 <div class="home">
   <div class="hero">
-    <img src="/images/bear.jpg">
+    <img src="http://i.imgur.com/6MY9LKW.jpg">
   </div>
-
-  <!--
-  <%= #render "_categories.html", conn: @conn, 
-      #categories: @categories, 
-      #current_category: @current_category, 
-      #page: @page.page_number %>
-  -->
-
-  <%= render "_filter.html", conn: @conn,
-      current_filter: @current_filter,
-      page: @page.page_number %>
-
-  <%= render "_news.html", posts: @page.entries %>
-
-  <%= pagination_links @page, 
-      view_style: :foundation,
-      previous: render("_prev_link.html"),
-      next: render("_next_link.html"),
-      diff: @diff
-  %>
+  <div class="intro">
+    <h1>Welcome!</h1>
+    <p>Thanks for checking out Mtnblog! My name is Tim Whitaker and I love to climb. Alyssa and I live in Fort Collins, CO and we try to get outside to climb as much as we can. We love traveling to new climbing areas, and taking photos and videos of our adventures. We primarily boulder, but we enjoy trad and sport climbing too. If you'd like to get in touch, feel free to email me at camp4climber@gmail.com. Hope you enjoy!</p>
+  </div>
 </div>
