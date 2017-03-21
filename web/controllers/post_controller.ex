@@ -25,7 +25,6 @@ defmodule Mtnblog.PostController do
     end
 
     conn
-    |> assign(:posts, page.entries)
     |> assign(:page, page)
     |> assign(:categories, categories)
     |> assign(:current_category, current_category)

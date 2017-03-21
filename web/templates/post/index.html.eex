@@ -1,9 +1,9 @@
 <div class="posts">
-  <%= for {post, index} <- Enum.with_index(@posts) do %>
+  <%= for {post, index} <- Enum.with_index(@page.entries) do %>
     <div class="post">
       <div class="post-wrapper">
         <div class="index">
-          <span><%= index + 1 %></span>
+          <span><%= (index + 1) + ((@page.page_number - 1) * @page.page_size) %></span>
         </div>
         <div class="content">
           <div class="heading">
