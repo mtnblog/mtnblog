@@ -48,8 +48,16 @@ button {
   letter-spacing:0.5px;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  margin:0;
+h1, h2, h3, h4, h5, h6 {
+  margin:10px 0;
   padding:0;
   color:$grey2;
+  line-height:1;
+}
+
+p {
+  margin:10px 0;
+  padding:0;
+  color:$grey2;
+  line-height:1.4;
 }
