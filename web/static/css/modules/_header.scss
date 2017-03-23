@@ -1,19 +1,23 @@
 header {
-  padding:5px;
   display:flex;
+  padding:5px;
   align-items:center;
-  background:$grey1;
-}
+  background:black;
+  position:absolute;
+  width:100%;
+  box-sizing:border-box;
+  z-index:999;
+  
+  .logo {
+    flex:0 0 auto;
+  }
 
-.logo {
-  flex:0 0 auto;
-}
+  nav {
+    flex:1 0 auto;
+    text-align:right;
 
-nav {
-  flex:1 0 auto;
-  text-align:right;
-}
-
-nav a {
-  padding:0 5px;
+    a {
+      padding:0 5px;
+    }
+  }
 }

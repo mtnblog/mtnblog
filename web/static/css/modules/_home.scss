@@ -1,14 +1,22 @@
 .home {
   .hero {
-    background:$grey1;
+    height:100vh;
+    width:100vw;
+    background:url(/images/hero_s.jpg) center bottom no-repeat;
+    background-size:cover;
 
-    img {
-      display:block;
-      width:100%;
+    
+    .intro {
+      position:absolute;
+      left:50%;
+      top:20%;
+      transform:translate(-50%);
+      max-width:640px;
+      width:90%;
+
+      img {
+        width:100%;
+      }
     }
-  }
-
-  .intro {
-    padding:10px;
   }
 }

@@ -1,16 +1,8 @@
 a {
   color:$blue1;
   text-decoration:none;
-}
-a:hover {
-  color:$blue2;
-}
-a:active {
-  color:$blue2;
-}
-
-p {
-  line-height:1.3;
+  &:hover {color:$blue2;}
+  &:active {color:$blue2;}
 }
 
 .logo {
@@ -18,22 +10,21 @@ p {
   color:$grey6;
   font-weight:bold;
   font-size:24px;
+
+  &:hover {color:$yellow1;}
 }
 
-.logo:hover {
-  color:$blue1;
-}
+nav { 
+  a {
+    font-family:sans-serif;
+    color:$grey6;
+    font-weight:bold;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
 
-nav a {
-  font-family:sans-serif;
-  color:$grey6;
-  font-weight:bold;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:0.5px;
-}
-nav a:hover {
-  color:$blue1;
+    &:hover {color:$yellow1;}
+  }
 }
 
 input {
