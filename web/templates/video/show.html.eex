@@ -1,6 +1,8 @@
 <div class="videos">
   <div class="video-hero">
-    <iframe src="<%= @video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div class="container">
+      <iframe src="<%= @video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
   </div>
 
   <div class="grid">
