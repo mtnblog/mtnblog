@@ -30,7 +30,7 @@
       box-sizing:border-box;
 
       img {
-        width:300px;
+        width:100%;
       }
       .video-info {
         padding:5px 0;
@@ -45,6 +45,19 @@
           font-size:12px;
         }
       }
+      @media screen and (max-width:860px) {
+        flex:0 0 50%;
+        padding:5px;
+      }
     }
+    @media screen and (max-width:860px) {
+      display:flex;
+      flex-wrap:wrap;
+    }
+  }
+
+  @media screen and (max-width:860px) {
+    display:block;
+    height:inherit;
   }
 }
