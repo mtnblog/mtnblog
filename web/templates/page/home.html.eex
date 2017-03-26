@@ -2,11 +2,5 @@
   <div class="hero">
     <div id="particles"></div>
     <div id="hero-fg"></div>
-
-    <!--
-    <div class="intro">
-      <img src="/images/intro.png">
-    </div>
-    -->
   </div>
 </div>
