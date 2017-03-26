@@ -5,6 +5,10 @@ import Masonry from "masonry-layout"
 
 fitvids();
 
+if ($('#particles').length) {
+  particlesJS.load('particles', '/js/particles.settings');
+}
+
 if ($('.grid').length) {
   $('.grid').imagesLoaded(function() {
     $('.grid').animate({'opacity': 1});

@@ -5,6 +5,19 @@
     background:url(/images/hero_s.jpg) center bottom no-repeat;
     background-size:cover;
 
+    #particles {
+      position:absolute;
+      width:100vw;
+      height:100vh;
+    }
+
+    #hero-fg {
+      position:absolute;
+      height:100vh;
+      width:100vw;
+      background:url(/images/hero_fg_s.png) center bottom no-repeat;
+      background-size:cover;
+    }
     
     .intro {
       position:absolute;
