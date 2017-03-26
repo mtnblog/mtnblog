@@ -1,8 +1,7 @@
 .videos {
-  background:white;
-  padding:5px;
   padding-top:40px;
-  min-height:100vh;
+  height:100vh;
+  display:flex;
 
   .video-hero {
     padding-bottom:5px;
@@ -21,6 +20,37 @@
       .location {
         color:$grey4;
         font-size:12px;
+      }
+    }
+  }
+
+  .video-player {
+    flex:1;
+    margin:5px;
+    height:calc(100% - 10px);
+    
+    .video-info {
+      .title {
+      }
+      .location {
+        color:$grey4;
+      }
+      .description {}
+    }
+  }
+  .video-list {
+    flex:0 0 300px;
+    margin:5px;
+    height:calc(100% - 10px);
+    overflow:scroll;
+
+    .video {
+      background:white;
+      margin-bottom:10px;
+      box-sizing:border-box;
+
+      img {
+        width:300px;
       }
     }
   }
