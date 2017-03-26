@@ -3,31 +3,11 @@
   height:100vh;
   display:flex;
 
-  .video-hero {
-    padding-bottom:5px;
-    max-width:1080px;
-    margin:0 auto;
-  }
-  .video {
-    .video-info {
-      padding:5px 0;
-      .title {
-        display:block;
-        color:$grey2;
-        font-size:14px;
-        font-weight:bold;
-      }
-      .location {
-        color:$grey4;
-        font-size:12px;
-      }
-    }
-  }
-
   .video-player {
     flex:1;
     margin:5px;
     height:calc(100% - 10px);
+    overflow:auto;
     
     .video-info {
       .title {
@@ -42,7 +22,7 @@
     flex:0 0 300px;
     margin:5px;
     height:calc(100% - 10px);
-    overflow:scroll;
+    overflow:auto;
 
     .video {
       background:white;
@@ -51,6 +31,19 @@
 
       img {
         width:300px;
+      }
+      .video-info {
+        padding:5px 0;
+        .title {
+          display:block;
+          color:$grey2;
+          font-size:14px;
+          font-weight:bold;
+        }
+        .location {
+          color:$grey4;
+          font-size:12px;
+        }
       }
     }
   }

@@ -1,36 +1,11 @@
 <div class="videos">
-  <!--
-  <div class="video-hero">
-    <div class="video-container">
-      <iframe src="<%= @video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="grid-sizer"></div>
-    <%= for video <- @videos do %>
-      <div class="video grid-item">
-        <a href="/videos/<%= video.id %>">
-          <div class="video-image-container">
-            <img class="video-image" src="<%= video.image %>">
-          </div>
-        </a>
-        <div class="video-info">
-          <a class="title" href="/videos/<%= video.id %>"><%= video.title %></a>
-          <span class="location"><%= video.location %></span>
-        </div>
-      </div>
-    <% end %>
-    </div>
-  -->
-
   <div class="video-player">
     <div class="video-container">
       <iframe src="<%= @video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       <div class="video-info">
         <h1 class="title"><%= @video.title %></h1>
         <span class="location"><%= @video.location %></span>
-        <p class="description">It may comfort you to know that Fry's death took only fifteen seconds, yet the pain was so intense, that it felt to him like fifteen years. And it goes without saying, it caused him to empty his bowels. Hey, tell me something. You've got all this money. How come you always dress like you're doing your laundry?</p>
+        <p class="description"><%= @video.description %></p>
       </div>
     </div> 
   </div>
