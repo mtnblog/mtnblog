@@ -42,6 +42,7 @@ config :ex_admin,
   modules: [
     Mtnblog.ExAdmin.Category,
     Mtnblog.ExAdmin.Dashboard,
+    Mtnblog.ExAdmin.Mountain,
     Mtnblog.ExAdmin.Post,
     Mtnblog.ExAdmin.Photo,
     Mtnblog.ExAdmin.Video

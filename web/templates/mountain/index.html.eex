@@ -1,0 +1,37 @@
+<div class="mountains">
+  <div id="map"></div>
+</div>
+
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
+<script>
+  L.mapbox.accessToken = 'pk.eyJ1IjoiY2FtcDRjbGltYmVyIiwiYSI6ImNpdzhwM2VzbjAyc24yb21zZjduZHh3dmMifQ.k42_5Mnh3NX7pUqkQTA2SA';
+  var map = L.mapbox.map('map', 'mapbox.streets').setView([20, 0], 2);
+
+  var geojson = {
+    type: 'Feature Collection',
+    features: [
+      <%= for mtn <- @mountains do %>
+        {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [<%= mtn.longitude %>, <%= mtn.latitude %>, <%= mtn.elevation %>]
+          },
+          properties: {
+            title: '<%= mtn.name %>',
+            description: 'Elevation: <%= mtn.elevation %>m <br> Coordinates: <%= mtn.longitude %>, <%= mtn.latitude %>'
+          }
+        },
+      <% end %>
+    ],
+    properties: {}
+  } 
+  
+  var dataLayer = L.mapbox.featureLayer(geojson);
+  var clusterGroup = new L.MarkerClusterGroup();
+
+  clusterGroup.addLayer(dataLayer);
+  map.addLayer(clusterGroup);
+</script>
