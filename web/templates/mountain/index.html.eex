@@ -30,8 +30,12 @@
   } 
   
   var dataLayer = L.mapbox.featureLayer(geojson);
+  dataLayer.addTo(map);
+  /*
   var clusterGroup = new L.MarkerClusterGroup();
 
   clusterGroup.addLayer(dataLayer);
   map.addLayer(clusterGroup);
+  */
+
 </script>
