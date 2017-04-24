@@ -1,20 +1,16 @@
 <div class="videos">
-  <div class="video-player">
-    <div class="video-container">
-      <iframe src="<%= @video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      <div class="video-info">
-        <h1 class="title"><%= @video.title %></h1>
-        <span class="location"><%= @video.location %></span>
-        <p class="description"><%= @video.description %></p>
-      </div>
-    </div> 
+  <div class="video-hero">
+    <iframe src="<%= @video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </div>
 
-  <div class="video-list">
+  <div class="grid">
+    <div class="grid-sizer"></div>
     <%= for video <- @videos do %>
-      <div class="video">
+      <div class="video grid-item">
         <a href="/videos/<%= video.id %>">
-          <img src="<%= video.image %>">
+          <div class="video-image-container">
+            <img class="video-image" src="<%= video.image %>">
+          </div>
         </a>
         <div class="video-info">
           <a class="title" href="/videos/<%= video.id %>"><%= video.title %></a>

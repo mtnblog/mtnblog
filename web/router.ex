@@ -24,15 +24,11 @@ defmodule Mtnblog.Router do
   scope "/", Mtnblog do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", PostController, :index
 
     get "/login", SessionController, :new
     post "/login", SessionController, :create
     delete "/logout", SessionController, :delete
-
-    get "/mountains", MountainController, :index
-
-    get "/news", PostController, :index
 
     get "/photos", PhotoController, :index
     get "/photos/:id", PhotoController, :show

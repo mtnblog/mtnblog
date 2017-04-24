@@ -33,12 +33,10 @@
     
   </head>
 
-  <body>
+  <body class="wrapper">
     <header>
       <a class="logo" href="/">MTNBLOG</a>
       <nav role="navigation">
-        <a href="/mountains">Mountains</a>
-        <a href="/news">News</a>        
         <a href="/photos">Photos</a>
         <a href="/videos">Videos</a>
       </nav>
