@@ -24,7 +24,7 @@ defmodule Mtnblog.Router do
   scope "/", Mtnblog do
     pipe_through :browser
 
-    get "/", PostController, :index
+    get "/", PageController, :home
 
     get "/login", SessionController, :new
     post "/login", SessionController, :create

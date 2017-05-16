@@ -1,6 +1,26 @@
 <div class="home">
-  <div class="hero">
-    <div id="particles"></div>
-    <div id="hero-fg"></div>
+  <div class="grid">
+    <div class="grid-sizer"></div>    
+    <%= for item <- @items do %>
+      <%= case item.__struct__ do %>
+        <% Mtnblog.Photo -> %>
+          <div class="photo grid-item">
+            <a href="/photos/<%= item.id %>">
+              <div class="image-container">
+                <img src="<%= item.image %>">
+              </div>
+            </a>
+          </div>
+        <% Mtnblog.Video -> %> 
+          <div class="video grid-item">
+            <a href="/videos/<%= item.id %>">
+              <div class="play-button"></div>
+              <div class="image-container">
+                <img src="<%= item.image %>">
+              </div>
+            </a>
+          </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
