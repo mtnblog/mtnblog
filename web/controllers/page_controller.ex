@@ -6,7 +6,7 @@ defmodule Mtnblog.PageController do
     photos = Repo.all(Photo)
     videos = Repo.all(Video)
 
-    items = Enum.concat(photos, videos) |> Enum.sort(&(&1.inserted_at > &2.inserted_at))
+    items = Enum.concat(photos, videos) |> Enum.sort(&(NaiveDateTime.compare(&1.inserted_at, &2.inserted_at) == :gt))
     render(conn, "home.html", items: items)
   end
 end
