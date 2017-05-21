@@ -30,6 +30,9 @@ defmodule Mtnblog.Router do
     post "/login", SessionController, :create
     delete "/logout", SessionController, :delete
 
+    get "/articles", ArticleController, :index
+    get "/articles/:id", ArticleController, :show
+
     get "/photos", PhotoController, :index
     get "/photos/:id", PhotoController, :show
 

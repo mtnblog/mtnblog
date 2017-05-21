@@ -2,7 +2,7 @@ defmodule Mtnblog.Article do
   use Mtnblog.Web, :model
   alias Mtnblog.Category
 
-  schema "photos" do
+  schema "articles" do
     field :author, :string
     field :content, :string
     field :feature_image, :string

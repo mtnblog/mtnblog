@@ -16,19 +16,3 @@ defmodule Mix.Tasks.Seed.Photos do
     end
   end
 end
-
-defmodule Mix.Tasks.Seed.Posts do
-  use Mix.Task
-  import Mix.Ecto
-  alias Mtnblog.{Repo, Post}
-
-  def run(_) do
-    ensure_started(Repo, [])
-    file = File.read!("../postdata.json")
-    json = Poison.decode!(file)
-
-    for post <- json["data"] do
-      Repo.insert!(%Post{rating: :rand.uniform(5) - 1, url: post["url"], title: post["title"]})
-    end
-  end
-end
