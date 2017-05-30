@@ -1,4 +1,12 @@
 <div class="home">
+  <div class="featured-article">
+    <img src="<%= @article.featured_image %>">
+    <h1><%= @article.title %></h1>
+    <p><%= truncate(@article.content, 200) %></p>
+  </div>
+</div>
+
+<div class="home">
   <div class="grid">
     <div class="grid-sizer"></div>    
     <%= for item <- @items do %>
